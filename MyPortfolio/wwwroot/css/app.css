@@ -100,3 +100,91 @@ a, .btn-link {
         content: var(--blazor-load-percentage-text, "Loading");
     }
 
+/* Container for the top section */
+.top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffe6e6; /* Light pink background color */
+    padding: 2rem;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem 0;
+    font-size: 1rem;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Intro section styling */
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+/* Intro text styling */
+.intro-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.roles {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.roles li {
+    margin-bottom: 0.5rem;
+}
+
+/* Profile image styling */
+.profile-image img {
+    width: 250px;
+    height: auto;
+    border: 2px solid #333;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Default (light mode) */
+body {
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+}
+
+/* Apply the colors */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}

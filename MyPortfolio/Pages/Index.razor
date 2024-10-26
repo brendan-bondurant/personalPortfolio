@@ -1,10 +1,45 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+<div class="top-section">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <span class="name">Brendan Bondurant</span>
+        <div class="nav-links">
+            <a href="#about">About me</a>
+            <a href="#work">Work</a>
+            <a href="#writing">Writing</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-<h1>Hello, world!</h1>
+    <!-- Intro Section -->
+    <div class="intro-section">
+        <div class="intro-text">
+            <h1>Hi, I'm Brendan.</h1>
+            <ul class="roles">
+                <li>Software Developer</li>
+                <li>Cybersecurity Engineer</li>
+                <li>Writer</li>
+                <li>Musician</li>
+                <li>Teacher</li>
+                <li>Full Stack Developer</li>
+                <li>Back End Engineer</li>
+            </ul>
+        </div>
 
-Welcome to your new app.
+        <!-- Profile Image -->
+        <div class="profile-image">
+            <img src="path/to/your/photo.jpg" alt="Brendan's photo" />
+        </div>
+    </div>
+</div>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code {
+    private bool isDarkMode = false;
 
+    private void ToggleDarkMode()
+    {
+        isDarkMode = !isDarkMode;
+        // Add any additional logic for toggling dark mode
+    }
+}
