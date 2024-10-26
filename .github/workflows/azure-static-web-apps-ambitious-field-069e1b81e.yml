@@ -7,24 +7,15 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches: [ "main" ]
 
-env:
-  APP_LOCATION: "./MyPortfolio" # Pointing to the directory where .csproj file is located
-  API_LOCATION: "" # No API for this app
-  APP_ARTIFACT_LOCATION: "wwwroot" # Location of client code build output for Blazor
-
-permissions:
-  contents: read
-
 jobs:
   build_and_deploy_job:
-    permissions:
-      contents: read # for actions/checkout to fetch code
-      pull-requests: write # for Azure/static-web-apps-deploy to comment on PRs
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+    permissions:
+       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           submodules: true
       - name: Build And Deploy
@@ -32,27 +23,11 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AMBITIOUS_FIELD_069E1B81E }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          app_location: ${{ env.APP_LOCATION }}
-          api_location: ${{ env.API_LOCATION }}
-          app_artifact_location: ${{ env.APP_ARTIFACT_LOCATION }}
+          app_location: "./MyPortfolio" # App source code path
+          api_location: "" # No API for this app
+          output_location: "wwwroot" # Built app content directory
           ###### End of Repository/Build Configurations ######
 
-  close_pull_request_job:
-    permissions:
-      contents: none
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AMBITIOUS_FIELD_069E1B81E }}
-          action: "close"
-          app_location: ${{ env.APP_LOCATION }}
-          api_location: ${{ env.API_LOCATION }}
-          app_artifact_location: ${{ env.APP_ARTIFACT_LOCATION }}
+
