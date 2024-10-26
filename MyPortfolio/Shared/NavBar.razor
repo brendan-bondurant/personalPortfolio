@@ -1,0 +1,14 @@
+@inherits MyPortfolio.Shared.NavBarBase
+
+    <nav class="navbar">
+        <span class="name">Brendan Bondurant</span>
+        <div class="nav-links">
+            <a href="#about">About me</a>
+            <a href="#work">Work</a>
+            <a href="#writing">Writing</a>
+            <a href="#contact">Contact</a>
+            <button @onclick="ToggleDarkMode">
+              @(IsDarkMode ? "Light Mode" : "Dark Mode")
+            </button>
+        </div>
+    </nav>
