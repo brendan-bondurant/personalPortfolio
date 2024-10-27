@@ -42,9 +42,43 @@
     Stuff to write
 </section>
 
-<section id="contact">
-    <!-- Contact content -->
-    Hit me up
-</section>
+    <section id="contact" class="my-5">
+        <h2>Contact</h2>
+        <p>Hit me up</p>
+        <!-- Button to trigger the modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+            Open Contact Modal
+        </button>
+    </section>
 
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contact form (example) -->
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
