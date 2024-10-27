@@ -1,51 +1,99 @@
-﻿.page {
+﻿:root {
+    /* Light Mode Colors */
+    --background-color-light: #EAEAEA;
+    --text-color-light: #1E1E2D;
+    --accent-color-light: #46405C;
+
+    /* Dark Mode Colors */
+    --background-color-dark: #1E1E2D;
+    --text-color-dark: #EAEAEA;
+    --accent-color-dark: #8B93C0;
+
+    /* Default (Light Mode) Colors */
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+    --accent-color: var(--accent-color-light);
+}
+
+/* Dark Mode Overrides */
+.dark-mode {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --accent-color: var(--accent-color-dark);
+}
+
+
+/* Apply the colors to the body */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Page layout structure */
+.page {
     position: relative;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
     flex: 1;
+    padding: 1rem; /* Adjust as needed */
 }
 
+/* Sidebar styling */
 .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-color: var(--background-color); /* Background for light mode */
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.dark-mode .sidebar {
+    background-image: linear-gradient(180deg, #1E1E2D 0%, #3a0647 70%);
+}
+
+/* Top-row styling */
 .top-row {
-    background-color: #f7f7f7;
+    background-color: var(--background-color);
     border-bottom: 1px solid #d6d5d5;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
     align-items: center;
+    padding: 0 1.5rem; /* Add some padding */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
+.dark-mode .top-row {
+    background-color: #1E1E2D; /* Dark mode color */
+    border-bottom: 1px solid var(--accent-color-dark); /* Adjust for dark mode */
+}
 
-    .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
-        text-decoration: underline;
-    }
+.top-row a,
+.top-row .btn-link {
+    white-space: nowrap;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: var(--accent-color); /* Accent color */
+}
 
-    .top-row ::deep a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+.top-row a:hover,
+.top-row .btn-link:hover {
+    text-decoration: underline;
+}
 
+/* Responsive adjustments */
 @media (max-width: 640.98px) {
     .top-row:not(.auth) {
         display: none;
     }
-
     .top-row.auth {
         justify-content: space-between;
     }
-
-    .top-row ::deep a, .top-row ::deep .btn-link {
+    .top-row a, .top-row .btn-link {
         margin-left: 0;
     }
 }
@@ -54,29 +102,15 @@ main {
     .page {
         flex-direction: row;
     }
-
     .sidebar {
         width: 250px;
         height: 100vh;
         position: sticky;
         top: 0;
     }
-
     .top-row {
         position: sticky;
         top: 0;
         z-index: 1;
     }
-
-    .top-row.auth ::deep a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
-
-    .top-row, article {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
-    }
 }
-

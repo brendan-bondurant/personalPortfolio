@@ -1,14 +1,23 @@
-@inherits MyPortfolio.Shared.NavBarBase
+
+
+
 
     <nav class="navbar">
         <a href="#" class="name">Brendan Bondurant</a>
         <div class="nav-links">
+            <button @onclick="ToggleDarkMode" class="icon-button">
+              @if (IsDarkMode)
+                {
+                  <img src="images/icons/sun.svg" alt="Light Mode" class="icon" />
+                }
+              else
+                {
+                  <img src="images/icons/moon.svg" alt="Dark Mode" class="icon" />
+                }
+            </button>
             <a href="#about">About me</a>
             <a href="#work">Work</a>
             <a href="#writing">Writing</a>
             <a href="#contact">Contact</a>
-            <button @onclick="ToggleDarkMode">
-              @(IsDarkMode ? "Light Mode" : "Dark Mode")
-            </button>
         </div>
     </nav>

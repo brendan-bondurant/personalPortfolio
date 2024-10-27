@@ -8,6 +8,31 @@ h1:focus {
     outline: none;
 }
 
+:root {
+    /* Light Mode Colors */
+    --background-color-light: #EAEAEA;
+    --text-color-light: #1E1E2D;
+    --accent-color-light: #46405C;
+
+    /* Dark Mode Colors */
+    --background-color-dark: #1E1E2D;
+    --text-color-dark: #EAEAEA;
+    --accent-color-dark: #8B93C0;
+
+    /* Default (Light Mode) Colors */
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+    --accent-color: var(--accent-color-light);
+}
+
+/* Dark Mode Overrides */
+.dark-mode {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --accent-color: var(--accent-color-dark);
+}
+
+
 a, .btn-link {
     color: #0071c1;
 }
@@ -171,27 +196,22 @@ a, .btn-link {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Default (light mode) */
-body {
-    --background-color: #ffffff;
-    --text-color: #000000;
-}
-
-/* Dark Mode */
-.dark-mode {
-    --background-color: #121212;
-    --text-color: #ffffff;
-}
 
 /* Apply the colors */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .blinking-underscore {
+    color: var(--accent-color);
     animation: blink 1s step-end infinite;
     font-weight: bold;
+}
+
+.roles {
+    color: var(--accent-color); /* Applies accent color to all child elements */
 }
 
 @keyframes blink {
@@ -199,3 +219,6 @@ body {
         opacity: 0;
     }
 }
+
+/* Remove background and border from the icon button */
+

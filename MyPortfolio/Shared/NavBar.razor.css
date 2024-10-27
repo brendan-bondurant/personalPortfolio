@@ -1,0 +1,31 @@
+/* Apply accent color to the icon in the navbar */
+.icon-button {
+  background: none; /* Remove any background */
+  border: none; /* Remove any border */
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.icon-button .icon {
+  width: 48px; /* Double the size */
+  height: 48px;
+  fill: var(--accent-color); /* Use the accent color variable */
+  transition: transform 0.3s ease, fill 0.3s ease; /* Smooth transition for color and size */
+}
+
+.icon-button:hover .icon {
+  transform: scale(1.5); /* Slightly enlarge on hover */
+  fill: var(--accent-color); /* Ensure accent color on hover */
+}
+
+/* Optional: Use accent color for navbar links */
+.nav-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
