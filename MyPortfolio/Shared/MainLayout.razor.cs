@@ -12,16 +12,15 @@ namespace MyPortfolio.Shared
 
         protected override async Task OnInitializedAsync()
         {
-            // Load initial dark mode state from JavaScript
+            // Initialize dark mode on page load from JavaScript
             IsDarkMode = await JS.InvokeAsync<bool>("initializeDarkMode");
         }
 
         private async Task ToggleDarkMode()
         {
-            // Toggle the mode
+            // Toggle dark mode state
             IsDarkMode = !IsDarkMode;
-
-            // Call JavaScript to apply the dark mode and save to local storage
+            // Update dark mode setting in JavaScript and localStorage
             await JS.InvokeVoidAsync("toggleDarkMode", IsDarkMode);
         }
     }
