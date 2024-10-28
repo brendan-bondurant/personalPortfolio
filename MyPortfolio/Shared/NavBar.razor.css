@@ -15,7 +15,7 @@
 }
 
 .icon-button:hover .icon {
-  transform: scale(1.5); /* Slightly enlarge on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
   fill: var(--accent-color); /* Ensure accent color on hover */
 }
 

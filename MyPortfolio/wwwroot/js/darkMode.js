@@ -1,6 +1,6 @@
 function toggleDarkMode(isDarkMode) {
   document.body.classList.toggle("dark-mode", isDarkMode);
-  localStorage.setItem('darkMode', isDarkMode); // Save setting for persistence
+  localStorage.setItem('darkMode', JSON.stringify(isDarkMode)); // Save setting for persistence
 }
 
 function initializeDarkMode() {
