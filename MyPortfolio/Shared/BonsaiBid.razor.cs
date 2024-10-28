@@ -1,22 +1,25 @@
 using Microsoft.AspNetCore.Components;
+using System.Collections.Generic;
 
-namespace BonsaiBid.Shared
+namespace MyPortfolio.Shared
 {
-      public partial class BonsaiBid : ComponentBase
+    public partial class BonsaiBid : ComponentBase
     {
-    // List of tech logo image paths
-    private List<string> TechLogos = new List<string>
-    {
-        "images/Icons/Logos/AWS.png",
-        "images/Icons/Logos/Azure.png",
-        "images/Icons/Logos/Bootstrap.png",
-        "images/Icons/Logos/C#.png",
-        "images/Icons/Logos/CSS.png",
-        "images/Icons/Logos/HTML.png",
-        "images/Icons/Logos/JS.png",
-        "images/Icons/Logos/Rails.png"
-        // Add more as needed
-    };
+        protected List<string> TechLogos { get; set; }
+
+        protected override void OnInitialized()
+        {
+            TechLogos = new List<string>
+            {
+                "images/Logos/AWS.png",
+                "images/Logos/Azure.png",
+                "images/Logos/Bootstrap.png",
+                "images/Logos/Heroku.png",
+                "images/Logos/CSS.png",
+                "images/Logos/HTML.png",
+                "images/Logos/JS.png",
+                "images/Logos/Rails.png"
+            };
+        }
     }
 }
-

@@ -5,23 +5,26 @@
         </button>
     </h2>
     <div id="bonsaiBidCollapse" class="accordion-collapse collapse" aria-labelledby="bonsaiBidHeading" data-bs-parent="#workAccordion">
-        <div class="accordion-body d-flex align-items-start">
-            <div class="tech-logos me-3">
-                <!-- Dynamically load tech logos here -->
+        <div class="accordion-body">
+            <!-- Logos at the top, full width -->
+            <div class="tech-logos d-flex justify-content-center flex-wrap mb-3">
                 @foreach (var logo in TechLogos)
                 {
-                    <img src="@logo" alt="Technology logo" class="tech-logo me-2" />
+                    <img src="@logo" alt="Technology logo" class="tech-logo" />
                 }
             </div>
-            <div class="project-description">
-                <p>
-                    <!-- Your text about the project goes here -->
-                    Bonsai Bid is an eBay-like auction platform built with Ruby on Rails, leveraging Redis, Sidekiq for background jobs, and PostgreSQL for data management...
-                </p>
-            </div>
-            <div class="project-image ms-3">
-                <!-- Placeholder for future project image -->
-                <img src="" alt="Future Bonsai Bid logo" class="future-image" style="display:none;" />
+            <!-- Side-by-side description and image containers -->
+            <div class="d-flex">
+                <div class="project-description me-3 flex-fill">
+                    <p>
+                        <!-- Your text about the project goes here -->
+                        Bonsai Bid is an eBay-like auction platform built with Ruby on Rails, leveraging Redis, Sidekiq for background jobs, and PostgreSQL for data management...
+                    </p>
+                </div>
+                <div class="project-image ms-3 flex-fill">
+                    <!-- Placeholder for future project image -->
+                    <img src="" alt="Future Bonsai Bid logo" class="future-image w-100" style="display:none;" />
+                </div>
             </div>
         </div>
     </div>
