@@ -1,84 +1,27 @@
 ﻿@page "/"
 
-<div class="top-section">
+<div class="navbar">
     <!-- Navbar -->
     <NavBar />
-
-    <!-- Intro Section -->
-    <div class="intro-section">
-        <div class="intro-text">
-            <h1>Hi, I'm Brendan.</h1>
-            <ul class="roles">
-                <li>Software Developer</li>
-                <li>Cybersecurity Engineer</li>
-                <li>Writer</li>
-                <li>Musician</li>
-                <li>Teacher</li>
-                <li>Full Stack Developer</li>
-                <li>Back End Engineer</li>
-                <li>Ruby on Rails Developer</li>
-            </ul>
-        </div>
-
-        <!-- Profile Image -->
-        <div class="profile-image">
-            <img src="images/personalHeadshot.jpg" alt="Brendan's photo" />
-        </div>
-    </div>
 </div>
 
-<section id="about">
-    <!-- About me content -->
-    About me and stuff
-</section>
-
-<section id="work">
-    <!-- Work content -->
-    Things I do
-</section>
-
-<section id="writing">
-    <!-- Writing content -->
-    Stuff to write
-</section>
-
-    <section id="contact" class="my-5">
-        <h2>Contact</h2>
-        <p>Hit me up</p>
-        <!-- Button to trigger the modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
-            Open Contact Modal
-        </button>
-    </section>
-
-
-<!-- Modal -->
-<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Contact form (example) -->
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </form>
-            </div>
-        </div>
-    </div>
+<div class="section-container py-5">
+    <!-- Greeting Section -->
+    <Greeting />
 </div>
 
+<div id="about" class="section-container py-5">
+    <About />
+</div>
+
+<div id="work" class="section-container py-5">
+    <Work />
+</div>
+
+<div id="writing" class="section-container py-5">
+    <Writing />
+</div>
+
+<div id="contact" class="section-container py-5">
+    <Contact />
+</div>

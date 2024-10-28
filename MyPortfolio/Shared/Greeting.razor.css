@@ -1,0 +1,9 @@
+/* In your CSS file */
+.greeting-background {
+  background-image: url('/images/icons/BackgroundGreeting.svg');
+  background-size: cover; /* Adjust based on desired fit */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2rem; /* Adjust padding as needed to fit the content */
+  /* Optional: set height if you want it to fill a specific space */
+}

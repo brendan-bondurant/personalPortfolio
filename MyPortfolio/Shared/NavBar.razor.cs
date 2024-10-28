@@ -1,18 +1,27 @@
-// NavBar.razor.cs
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
-namespace MyPortfolio.Shared  // Make sure to replace with the correct namespace
+namespace MyPortfolio.Shared
 {
-    public class NavBarBase : ComponentBase
+    public partial class NavBar : ComponentBase
     {
+        [Inject] private IJSRuntime JS { get; set; }
 
-        // Dark mode toggle state
-        public bool IsDarkMode { get; set; } = false;
+        private bool IsDarkMode { get; set; }
 
-        // Method to toggle dark mode
-        public void ToggleDarkMode()
+        protected override async Task OnInitializedAsync()
         {
+            // Load initial dark mode state from JavaScript
+            IsDarkMode = await JS.InvokeAsync<bool>("initializeDarkMode");
+        }
+
+        private async Task ToggleDarkMode()
+        {
+            // Toggle the mode
             IsDarkMode = !IsDarkMode;
+            
+            // Call JavaScript to apply the dark mode and save to local storage
+            await JS.InvokeVoidAsync("toggleDarkMode", IsDarkMode);
         }
     }
 }
