@@ -1,0 +1,21 @@
+﻿@using MyPortfolio.Models
+@code {
+    [Parameter] public Post? SelectedPost { get; set; }
+}
+
+<div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="postModalLabel">@SelectedPost?.Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @((MarkupString)SelectedPost?.Content) <!-- Render HTML safely -->
+            </div>
+            <div class="modal-footer">
+                <p><small>Posted on: @SelectedPost?.Date</small></p>
+            </div>
+        </div>
+    </div>
+</div>

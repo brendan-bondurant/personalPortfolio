@@ -13,7 +13,6 @@ namespace MyPortfolio.Shared
             {
                 "images/Logos/AWS.png",
                 "images/Logos/Azure.png",
-                "images/Logos/Bootstrap.png",
                 "images/Logos/Heroku.png",
                 "images/Logos/CSS.png",
                 "images/Logos/HTML.png",

@@ -38,17 +38,14 @@ body.dark-mode {
 }
 
     body.dark-mode a,
-    body.dark-mode .btn-link {
+    body.dark-mode .btn-link,
+    body.dark-mode .navbar a,
+    body.dark-mode .navbar .nav-link {
         color: var(--link-color-dark);
     }
 
     body.dark-mode .navbar {
         background-color: var(--background-color-dark);
-        color: var(--text-color-dark);
-    }
-
-    body.dark-mode .icon-button img {
-        filter: invert(1); /* Adjust icon colors in dark mode */
     }
 
 /* Button Styling */
@@ -149,6 +146,12 @@ body.dark-mode {
     font-size: 1rem;
 }
 
+    /* Custom CSS for Navbar */
+    .navbar .dark-mode-btn {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
 .name {
     font-weight: bold;
     font-size: 1.2rem;
@@ -157,58 +160,6 @@ body.dark-mode {
 .nav-links a {
     margin-left: 2rem;
     color: var(--text-color);
-    text-decoration: none;
-}
-
-    .nav-links a:hover {
-        text-decoration: underline;
-    }
-
-/* Dark Mode Styling for Specific Elements */
-.sidebar, .top-row {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.dark-mode {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-}
-
-    body.dark-mode a,
-    body.dark-mode .btn-link,
-    body.dark-mode .navbar a, /* Navbar links in dark mode */
-    body.dark-mode .navbar .nav-link {
-        color: var(--link-color-dark);
-    }
-
-    body.dark-mode .navbar {
-        background-color: var(--background-color-dark);
-    }
-
-    body.dark-mode .icon-button img {
-        filter: invert(1); /* Adjust icon colors in dark mode */
-    }
-
-/* Additional Styling for Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    padding: 1rem 0;
-    font-size: 1rem;
-}
-
-.name {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.nav-links a {
-    margin-left: 2rem;
-    color: var(--text-color); /* Ensures light mode link color */
     text-decoration: none;
 }
 

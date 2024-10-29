@@ -1,0 +1,31 @@
+<div class="accordion-item">
+    <h2 class="accordion-header" id="philosDBLHeading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#philosDBLCollapse" aria-expanded="false" aria-controls="philosDBLCollapse">
+            PhilosDBL
+        </button>
+    </h2>
+    <div id="philosDBLCollapse" class="accordion-collapse collapse" aria-labelledby="philosDBLHeading" data-bs-parent="#workAccordion">
+        <div class="accordion-body">
+            <!-- Logos at the top, full width -->
+            <div class="tech-logos d-flex justify-content-center flex-wrap mb-3">
+                @foreach (var logo in TechLogos)
+                {
+                    <img src="@logo" alt="Technology logo" class="tech-logo" />
+                }
+            </div>
+            <!-- Side-by-side description and image containers -->
+            <div class="d-flex">
+                <div class="project-description me-3 flex-fill">
+                    <p>
+                        <!-- Your text about the project goes here -->
+                        Did some volunteer work 
+                    </p>
+                </div>
+                <div class="project-image ms-3 flex-fill">
+                    <!-- Placeholder for future project image -->
+                    <img src="" alt="Future philosdbl logo" class="future-image w-100" style="display:none;" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
