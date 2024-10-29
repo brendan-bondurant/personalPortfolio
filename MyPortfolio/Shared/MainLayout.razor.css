@@ -137,20 +137,27 @@ body.dark-mode {
     }
 
 /* Navbar Styling */
+/* Wrapper for the navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    padding: 1rem 0;
-    font-size: 1rem;
+  padding: 1rem 0;
+  font-size: 1rem;
 }
 
-    /* Custom CSS for Navbar */
-    .navbar .dark-mode-btn {
-        font-size: 1.5rem;
-        padding: 0.5rem 1rem;
-    }
+.navbar .navbar-brand {
+  margin-right: auto; /* Moves brand to the left */
+}
+
+.navbar .navbar-nav {
+  margin-left: auto; /* Moves nav links to the right */
+}
+
+
+/* Dark mode button styling if it applies */
+.icon-button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
 
 .name {
     font-weight: bold;
