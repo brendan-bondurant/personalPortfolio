@@ -1,6 +1,11 @@
+@code {
+    [Parameter] public EventCallback<bool> OnToggleDarkMode { get; set; }
+    [Parameter] public bool IsDarkMode { get; set; }
+}
+
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">Brendan Bondurant</a>
-    <button @onclick="ToggleDarkMode" class="btn btn-link icon-button ms-2">
+    <a class="navbar-brand mx-auto" href="#">Brendan Bondurant</a>
+    <button @onclick="() => OnToggleDarkMode.InvokeAsync(!IsDarkMode)" class="btn btn-link icon-button ms-2">
         @if (IsDarkMode)
         {
             <img src="images/icons/sun.svg" alt="Light Mode" class="icon" />
