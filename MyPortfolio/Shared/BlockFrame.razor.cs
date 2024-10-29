@@ -12,7 +12,9 @@ namespace MyPortfolio.Shared
             TechLogos = new List<string>
             {
                 "images/Logos/Go-Logo_Blue.png",
-                "images/Logos/Docker.png"
+                "images/Logos/Docker.png",
+                "images/Logos/gitlab.png"
+                
             };
         }
     }

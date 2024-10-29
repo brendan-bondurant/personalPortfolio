@@ -1,1 +1,216 @@
-﻿
+﻿/* @import url('open-iconic/font/css/open-iconic-bootstrap.min.css'); */
+
+/* Global Styling */
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1:focus {
+    outline: none;
+}
+
+:root {
+    /* Light Mode Variables */
+    --background-color: #EAEAEA;
+    --text-color: #1e1e2d;
+    --link-color: #1e1e2d;
+    /* Dark Mode Variables */
+    --background-color-dark: #1e1e2d;
+    --text-color-dark: #EAEAEA;
+    --link-color-dark: #EAEAEA;
+}
+
+/* Default (Light Mode) */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a, .btn-link {
+    color: var(--link-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+    body.dark-mode a,
+    body.dark-mode .btn-link,
+    body.dark-mode .navbar a,
+    body.dark-mode .navbar .nav-link {
+        color: var(--link-color-dark);
+    }
+
+    body.dark-mode .navbar {
+        background-color: var(--background-color-dark);
+    }
+
+/* Button Styling */
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+/* Validation Styling */
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+/* Blazor Error UI Styling */
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,...) no-repeat 1rem/1.8rem, #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: white;
+}
+
+/* Loading Progress Styling */
+.loading-progress {
+    position: relative;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin: 20vh auto 1rem auto;
+}
+
+    .loading-progress circle {
+        fill: none;
+        stroke: #e0e0e0;
+        stroke-width: 0.6rem;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+    }
+
+        .loading-progress circle:last-child {
+            stroke: #1b6ec2;
+            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+            transition: stroke-dasharray 0.05s ease-in-out;
+        }
+
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+    .loading-progress-text:after {
+        content: var(--blazor-load-percentage-text, "Loading");
+    }
+
+/* Navbar Styling */
+/* Wrapper for the navbar */
+.navbar {
+  padding: 1rem 0;
+  font-size: 1rem;
+}
+
+.navbar .navbar-brand {
+  margin-right: auto; /* Moves brand to the left */
+}
+
+.navbar .navbar-nav {
+  margin-left: auto; /* Moves nav links to the right */
+}
+
+
+/* Dark mode button styling if it applies */
+.icon-button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+
+.name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+/* Responsive Adjustments */
+@media (max-width: 640.98px) {
+    .top-row:not(.auth) {
+        display: none;
+    }
+
+    .top-row.auth {
+        justify-content: space-between;
+    }
+
+    .top-row a, .top-row .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+.section-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

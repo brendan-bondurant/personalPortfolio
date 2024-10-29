@@ -138,13 +138,18 @@ body.dark-mode {
 
 /* Navbar Styling */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
     padding: 1rem 0;
     font-size: 1rem;
 }
+
+.navbar .navbar-brand {
+    margin-right: auto; /* Moves brand to the left */
+}
+
+.navbar .navbar-nav {
+    margin-left: auto; /* Moves nav links to the right */
+}
+
 
     /* Custom CSS for Navbar */
     .navbar .dark-mode-btn {

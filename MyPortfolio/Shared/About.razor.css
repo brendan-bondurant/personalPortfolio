@@ -1,0 +1,13 @@
+/* Styling for the profile image */
+.profile-image img {
+  width: 80%;               /* Adjust size as needed */
+  max-width: 250px;         /* Set a max size to prevent it from getting too large */
+      /* Makes the image a circle */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for depth */
+  transition: transform 0.3s ease; /* Optional: smooth hover scaling */
+}
+
+/* Optional hover effect */
+.profile-image img:hover {
+  transform: scale(1.05);  /* Slightly enlarge on hover */
+}

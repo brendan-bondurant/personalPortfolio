@@ -1,9 +1,31 @@
-﻿.tech-logo {
-    width: 40px;
-    height: 40px;
+﻿/* Styles for logos */
+.tech-logos img.tech-logo {
+    width: 50px;
+    height: 50px;
+    margin: 0.5rem;
 }
 
-.future-image {
-    width: 100px;
+/* Project description and image container */
+.project-description {
+    flex-basis: 60%; /* Takes up 60% of the width */
+}
+
+.project-image {
+    flex-basis: 40%; /* Takes up 40% of the width */
+    max-width: 100%; /* Ensures image is responsive */
+}
+
+.project-image img {
+    width: 100%; /* Ensures image fills container */
     height: auto;
+    border-radius: 8px; /* Rounds corners slightly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+/* Padding adjustments for text */
+.project-description p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #333;
 }
