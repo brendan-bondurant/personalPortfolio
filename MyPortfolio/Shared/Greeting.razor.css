@@ -1,9 +1,61 @@
-/* In your CSS file */
+/* Background Styling for Greeting Section */
 .greeting-background {
   background-image: url('/images/icons/BackgroundGreeting.svg');
-  background-size: cover; /* Adjust based on desired fit */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 2rem; /* Adjust padding as needed to fit the content */
-  /* Optional: set height if you want it to fill a specific space */
+  padding: 2rem;
+}
+
+/* Main Section Styling */
+.greeting-section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+/* Text Styling */
+.intro-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.roles {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.blinking-underscore {
+  animation: blink 1s steps(2, start) infinite;
+}
+
+/* Image Styling */
+.profile-image img {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .greeting-section {
+    text-align: center;
+  }
+
+  .intro-text, .profile-image {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-image img {
+    width: 60%;
+  }
+}
+
+/* Blinking Underscore Animation */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
