@@ -10,20 +10,23 @@
             <div class="tech-logos d-flex justify-content-center flex-wrap mb-3">
                 @foreach (var logo in TechLogos)
                 {
-                    <img src="@logo" alt="Technology logo" class="tech-logo" />
+                    <img src="@logo" alt="Technology logo" class="tech-logo me-3 mb-3" />
                 }
             </div>
             <!-- Side-by-side description and image containers -->
-            <div class="d-flex">
-                <div class="project-description me-3 flex-fill">
-                    <p>
-                        <!-- Your text about the project goes here -->
-                        Bonsai Bid is an eBay-like auction platform built with Ruby on Rails, leveraging Redis, Sidekiq for background jobs, and PostgreSQL for data management...
-                    </p>
+            <div class="d-flex align-items-start">
+                <div class="project-description flex-grow-1 me-3">
+                    <ul>
+                        <li>Developing a scalable auction platform using Ruby on Rails, integrated with Redis for caching and Sidekiq for background job processing.</li>
+                        <li>Implementing dynamic form logic using JavaScript and Stimulus, enabling real-time updates and intuitive user interactions based on input, enhancing the overall user experience.</li>
+                        <li>Gaining deep expertise in full-stack development and architecture, continuous deployment with GitHub Actions, and optimizing performance using Skylight.</li>
+                        <li>Delivering a high-performance, user-friendly platform while maintaining 95%+ test coverage, facilitating efficient online auctions and supporting business growth.</li>
+                        <li>Spearheaded the overall system architecture and design, ensuring scalability, maintainability, and a clean codebase, while making key decisions on database structure, API design, and frontend-backend interaction.</li>
+                    </ul>
                 </div>
-                <div class="project-image ms-3 flex-fill">
+                <div class="project-image ms-3 flex-shrink-0">
                     <!-- Placeholder for future project image -->
-                    <img src="" alt="Future Bonsai Bid logo" class="future-image w-100" style="display:none;" />
+                    <img src="images/Logos/BonsaiBid.png" alt="Bonsai Bid Logo" class="img-fluid rounded" />
                 </div>
             </div>
         </div>
