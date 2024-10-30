@@ -5,6 +5,11 @@
     margin: 0.5rem;
 }
 
+.tech-logo {
+    height: 50px;
+    width: auto;
+}
+
 /* Project description and image container */
 .project-description {
     flex-basis: 60%; /* Takes up 60% of the width */
