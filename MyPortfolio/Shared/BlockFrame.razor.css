@@ -1,14 +1,11 @@
 ﻿/* Styles for logos */
 .tech-logos img.tech-logo {
-    width: 50px;
+    width: auto;
     height: 50px;
     margin: 0.5rem;
 }
 
-.tech-logo {
-    height: 50px;
-    width: auto;
-}
+
 
 /* Project description and image container */
 .project-description {
