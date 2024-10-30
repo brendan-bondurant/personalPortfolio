@@ -23,6 +23,13 @@ namespace MyPortfolio.Services
             var jsonResponse = await response.Content.ReadAsStringAsync();
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             var result = JsonSerializer.Deserialize<WordPressApiResponse>(jsonResponse, options);
+            
+            // Map FeaturedImageUrl from post_thumbnail.URL or featured_image
+            result?.Posts.ForEach(post =>
+            {
+                post.FeaturedImageUrl = post.PostThumbnail?.URL ?? post.FeaturedImage;
+            });
+
             return result?.Posts ?? new List<Post>();
         }
     }
@@ -30,5 +37,10 @@ namespace MyPortfolio.Services
     public class WordPressApiResponse
     {
         public List<Post> Posts { get; set; }
+    }
+
+    public class PostThumbnail
+    {
+        public string URL { get; set; }  // URL of the thumbnail image
     }
 }

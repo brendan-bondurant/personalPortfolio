@@ -19,7 +19,11 @@
         <ul>
             @foreach (var post in posts)
             {
-                <li>
+                <li class="mb-3 d-flex align-items-start">
+                    @if (!string.IsNullOrEmpty(post.FeaturedImageUrl))
+                    {
+                        <img src="@post.FeaturedImageUrl" alt="Featured Image" class="img-thumbnail me-3" style="width: 100px; height: auto;" />
+                    }
                     <!-- Button to trigger modal with Bootstrap attributes -->
                     <button class="btn btn-link" @onclick="() => ShowPost(post)" data-bs-toggle="modal" data-bs-target="#postModal">
                         @post.Title

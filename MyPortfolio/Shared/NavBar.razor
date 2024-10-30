@@ -3,10 +3,19 @@
     [Parameter] public bool IsDarkMode { get; set; }
 }
 
-<nav class="navbar navbar-expand-lg @(IsDarkMode ? "navbar-dark bg-dark" : "navbar-light bg-light")">
+<nav class="navbar navbar-expand-lg @(IsDarkMode ? "navbar-dark bg-dark fixed-top" : "navbar-light bg-light fixed-top")">
     <div class="container-fluid">
         <div class="d-flex align-items-center">
             <a class="navbar-brand me-3" href="#">Brendan Bondurant</a>
+            
+            <!-- LinkedIn Button with Logo -->
+            <a href="https://www.linkedin.com/in/brendanbondurant/" target="_blank" class="me-2">
+                <img src="images/Logos/Linkedin.png" alt="LinkedIn Profile" style="width: 24px; height: 24px;" />
+            </a>
+
+            <a href="mailto:bondurant.brendan@gmail.com" class="me-2">
+                <img src="images/Logos/gmail.png" alt="Email" style="width: 24px; height: 24px;" />
+            </a>
 
             <!-- Dark Mode Toggle Button -->
             <button @onclick="() => OnToggleDarkMode.InvokeAsync(!IsDarkMode)" class="btn btn-link icon-button p-0 ms-2">
@@ -37,9 +46,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#writing">Writing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>

@@ -13,11 +13,13 @@ namespace MyPortfolio.Shared
         private List<Post> posts = new();
         public Post? selectedPost { get; private set; }
 
+        // Fetch posts on component initialization
         protected override async Task OnInitializedAsync()
         {
             posts = await WordPressService.GetLatestPostsAsync();
         }
 
+        // Sets the selected post for display in the modal
         private async Task ShowPost(Post post)
         {
             selectedPost = post;
