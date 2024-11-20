@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "route": "/*.svg",
+      "headers": {
+        "Content-Type": "image/svg+xml"
+      }
+    },
+    {
+      "route": "/*",
+      "serve": "/index.html"
+    }
+  ]
+}
