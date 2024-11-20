@@ -5,27 +5,50 @@
         </button>
     </h2>
     <div id="blockFrameCollapse" class="accordion-collapse collapse" aria-labelledby="blockFrameHeading" data-bs-parent="#workAccordion">
-        <div class="accordion-body">
-            <!-- Logos at the top, full width -->
-            <div class="tech-logos d-flex justify-content-center flex-wrap mb-3">
-                @foreach (var logo in TechLogos)
-                {
-                    <img src="@logo" alt="Technology logo" class="tech-logo" />
-                }
+        <div class="accordion-body" style="max-width: 900px; margin: 0 auto;">
+            <!-- Logo and Tech Stack Section -->
+            <div class="d-flex justify-content-between align-items-center flex-wrap mb-5">
+                <div class="blockframe-logo text-center" style="margin-right: 20px;">
+                    <img src="images/Logos/Blockframe.png" alt="Blockframe Logo" class="img-fluid" style="height: 80px; max-width: 200px;" />
+                </div>
+                <div class="tech-logos d-flex justify-content-center flex-wrap" style="gap: 30px;">
+                    @foreach (var logo in TechLogos)
+                    {
+                        <img src="@logo" alt="Technology logo" class="tech-logo" style="height: 50px; object-fit: contain; max-width: 80px;" />
+                    }
+                </div>
             </div>
-            <!-- Side-by-side description and image containers -->
-            <div class="d-flex align-items-center">
-                <div class="project-description flex-grow-1 me-3">
-                    <ul>
-                        <li>Contributed to the Philos blockchain project, writing and optimizing Go code to enhance security and data integrity in decentralized systems.</li>
-                        <li>Quickly adapted to Go programming, focusing on blockchain security and collaborating on validation and testing models that improved system reliability.</li>
-                        <li>Modernized a legacy testing suite and contributed to the implementation of validation functions to ensure that the correct data is going where it is supposed to go.</li>
-                        <li>Helped ensure that data was correctly populated in the MySQL and SQLite databases.</li>
-                    </ul>
-                </div>
-                <div class="project-image flex-shrink-0">
-                    <img src="images/Logos/Blockframe.png" alt="Blockframe Logo" class="img-fluid rounded" />
-                </div>
+
+            <!-- Description Section -->
+            <div class="mb-4">
+                <h4>What is BlockFrame?</h4>
+                <p>
+                    At BlockFrame, I worked on the Philos project, which focuses on creating secure, decentralized systems for document security and supply chain management. 
+                    Working in a fully remote and decentralized environment was an exciting challenge.
+                </p>
+            </div>
+
+            <!-- Contributions Section -->
+            <div class="mb-4">
+                <h4>My Contributions</h4>
+                <ul>
+                    <li>Contributed to the Philos blockchain project, writing and optimizing Go code to enhance security and data integrity in decentralized systems.</li>
+                    <li>Quickly adapted to Go programming, focusing on blockchain security and collaborating on validation and testing models that improved system reliability.</li>
+                    <li>Modernized a legacy testing suite to align with new workflows and data models, ensuring seamless operation and accuracy.</li>
+                    <li>Helped ensure data was correctly populated in MySQL and SQLite databases, maintaining consistency and accuracy across systems.</li>
+                </ul>
+            </div>
+
+            <!-- Reflection Section -->
+            <div>
+                <h4>What I Learned</h4>
+                <p>
+                    One of the highlights was learning Go on the fly and using it to build production-ready backend services. Collaborating with the CTO, I helped design validation and testing models that enhanced system accuracy and reliability.
+                    Developing software with a strong focus on cybersecurity best practices at every step was an invaluable experience.
+                </p>
+                <p>
+                    It was rewarding to balance new technologies, solve challenging problems, and ensure that everything worked as expected behind the scenes.
+                </p>
             </div>
         </div>
     </div>

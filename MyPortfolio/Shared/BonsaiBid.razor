@@ -5,29 +5,50 @@
         </button>
     </h2>
     <div id="bonsaiBidCollapse" class="accordion-collapse collapse" aria-labelledby="bonsaiBidHeading" data-bs-parent="#workAccordion">
-        <div class="accordion-body">
-            <!-- Logos at the top, full width -->
-            <div class="tech-logos d-flex justify-content-center flex-wrap mb-3">
-                @foreach (var logo in TechLogos)
-                {
-                    <img src="@logo" alt="Technology logo" class="tech-logo me-3 mb-3" />
-                }
+        <div class="accordion-body" style="max-width: 900px; margin: 0 auto;">
+            <!-- Section with description -->
+            <div class="row align-items-start mb-4">
+                <div class="col-12">
+                    <h3>What is Bonsai Bid?</h3>
+                    <p>
+                        Bonsai Bid is an auction-focused e-commerce platform that bridges the gap between tight-knit online communities and the secure, streamlined functionality of traditional e-commerce. The goal is to create an engaging, intuitive platform for users while ensuring security and reliability.
+                    </p>
+                </div>
             </div>
-            <!-- Side-by-side description and image containers -->
-            <div class="d-flex align-items-start">
-                <div class="project-description flex-grow-1 me-3">
-                    <ul>
-                        <li>Developing a scalable auction platform using Ruby on Rails, integrated with Redis for caching and Sidekiq for background job processing.</li>
-                        <li>Implementing dynamic form logic using JavaScript and Stimulus, enabling real-time updates and intuitive user interactions based on input, enhancing the overall user experience.</li>
-                        <li>Gaining deep expertise in full-stack development and architecture, continuous deployment with GitHub Actions, and optimizing performance using Skylight.</li>
-                        <li>Delivering a high-performance, user-friendly platform while maintaining 95%+ test coverage, facilitating efficient online auctions and supporting business growth.</li>
-                        <li>Spearheaded the overall system architecture and design, ensuring scalability, maintainability, and a clean codebase, while making key decisions on database structure, API design, and frontend-backend interaction.</li>
-                    </ul>
-                </div>
-                <div class="project-image ms-3 flex-shrink-0">
-                    <!-- Placeholder for future project image -->
 
+            <!-- Tech Stack Section -->
+            <div class="mb-4">
+                <h4>Tech Stack</h4>
+                <div class="tech-logos d-flex justify-content-center flex-wrap mb-3" style="gap: 20px;">
+                    @foreach (var logo in TechLogos)
+                    {
+                        <img src="@logo" alt="Technology logo" class="tech-logo" style="height: 50px; object-fit: contain;" />
+                    }
                 </div>
+                <ul class="list-unstyled">
+                    <li><strong>Backend:</strong> Ruby on Rails forms the backbone of the application.</li>
+                    <li><strong>Frontend:</strong> JavaScript Stimulus Controllers styled with Tailwind CSS.</li>
+                    <li><strong>Storage:</strong> Images in AWS S3; PostgreSQL for the database.</li>
+                    <li><strong>Other Tools:</strong> Redis, Sidekiq, Skylight for monitoring performance.</li>
+                </ul>
+            </div>
+
+            <!-- Development Highlights -->
+            <div class="mb-4">
+                <h4>Development Highlights</h4>
+                <ul>
+                    <li>Intuitive and powerful search features for precise results.</li>
+                    <li>Smooth and accurate auction flow management.</li>
+                    <li>Comprehensive testing with RSpec, Selenium, and Playwright.</li>
+                </ul>
+            </div>
+
+            <!-- Current Status -->
+            <div>
+                <h4>Current Status</h4>
+                <p>
+                    Collaborating closely with a designer to finalize the platform's aesthetics as we approach the MVP release. A demo is also in progress and will be ready once the final design elements are implemented.
+                </p>
             </div>
         </div>
     </div>

@@ -16,21 +16,26 @@
     }
     else
     {
-        <ul>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
             @foreach (var post in posts)
             {
-                <li class="mb-3 d-flex align-items-start">
-                    @if (!string.IsNullOrEmpty(post.FeaturedImageUrl))
-                    {
-                        <img src="@post.FeaturedImageUrl" alt="Featured Image" class="img-thumbnail me-3" style="width: 100px; height: auto;" />
-                    }
-                    <!-- Button to trigger modal with Bootstrap attributes -->
-                    <button class="btn btn-link" @onclick="() => ShowPost(post)" data-bs-toggle="modal" data-bs-target="#postModal">
-                        @post.Title
-                    </button>
-                </li>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        @if (!string.IsNullOrEmpty(post.FeaturedImageUrl))
+                        {
+                            <img src="@post.FeaturedImageUrl" alt="Featured Image" class="card-img-top" style="height: 150px; object-fit: cover;" />
+                        }
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">@post.Title</h5>
+                            <p class="card-text text-muted mb-4">@post.Date</p>
+                            <button class="btn btn-primary mt-auto" @onclick="() => ShowPost(post)" data-bs-toggle="modal" data-bs-target="#postModal">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
             }
-        </ul>
+        </div>
     }
 </section>
 
