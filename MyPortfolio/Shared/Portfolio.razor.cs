@@ -17,6 +17,7 @@ namespace MyPortfolio.Shared
                 "images/Logos/github.png",
                 "images/Logos/CSS.png",
                 "images/Logos/HTML.png",
+                "images/Logos/JS.png",
                 "images/Logos/Azure.png"
             };
         }
