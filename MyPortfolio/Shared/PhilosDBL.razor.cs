@@ -12,7 +12,10 @@ namespace MyPortfolio.Shared
             TechLogos = new List<string>
             {
                 "images/Logos/Csharp.png",
-                "images/Logos/Blazor.png"
+                "images/Logos/Blazor.png",
+                "images/Logos/gitlab.png",
+                "images/Logos/CSS.png",
+                "images/Logos/HTML.png"
             };
         }
     }
