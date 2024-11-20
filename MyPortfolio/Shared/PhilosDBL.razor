@@ -5,31 +5,50 @@
         </button>
     </h2>
     <div id="philosDBLCollapse" class="accordion-collapse collapse" aria-labelledby="philosDBLHeading" data-bs-parent="#workAccordion">
-        <div class="accordion-body">
-            <!-- Logos at the top, full width -->
-            <div class="tech-logos d-flex justify-content-center flex-wrap mb-3">
-                @foreach (var logo in TechLogos)
-                {
-                    <img src="@logo" alt="Technology logo" class="tech-logo" />
-                }
-            </div>
-            <!-- Side-by-side description and image containers -->
-            <div class="d-flex">
-                <div class="project-description me-3 flex-fill">
-                    <p>
-                        PhilosDBL is developing a secure, scalable, and energy-efficient distributed ledger solution in partnership with the International Alliance of Trust Chains to ensure impartial governance for the Philos Marketplace™.
-                    </p>
-                    <ul>
-                        <li>Collaborated with a small, remote team to design and maintain an admin console using C# and Blazor, improving the user interface and overall efficiency.</li>
-                        <li>Wrote a suite of unit tests to ensure the stability and performance of backend features, focusing on comprehensive test coverage.</li>
-                        <li>Used PostgreSQL to validate and manually test the backend functionality, while also creating clear, concise documentation to support onboarding for future team members.</li>
-                    </ul>
-                </div>
+        <div class="accordion-body" style="max-width: 900px; margin: 0 auto;">
 
-                <div class="project-image ms-3 flex-fill">
-                    <!-- Placeholder for future project image -->
-                    <img src="" alt="Future philosdbl logo" class="future-image w-100" style="display:none;" />
+                        <!-- Tech Stack Section -->
+            <div class="mb-5">
+                <h4 class="text-center">Tech Stack</h4>
+                <div class="tech-logos d-flex justify-content-center flex-wrap mt-3" style="gap: 30px;">
+                    @foreach (var logo in TechLogos)
+                    {
+                        <img src="@logo" alt="Technology logo" class="tech-logo" style="height: 50px; object-fit: contain; max-width: 80px;" />
+                    }
                 </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="row align-items-start mb-4">
+                <div class="col-12">
+                    <h3>What is PhilosDBL?</h3>
+                    <p>
+                        PhilosDBL is developing a secure, scalable, and energy-efficient distributed ledger solution in partnership with the International Alliance of Trust Chains. The goal is to ensure impartial governance for the Philos Marketplace™.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contributions Section -->
+            <div class="mb-4">
+                <h4>My Contributions</h4>
+                <ul>
+                    <li>Collaborated with a small, remote team to design and maintain an admin console using C# and Blazor, improving the user interface and overall efficiency.</li>
+                    <li>Focused on creating pages and ensuring the navigation menu is intuitive and well-connected.</li>
+                    <li>Wrote a suite of unit tests to ensure the stability and performance of backend features, focusing on comprehensive test coverage.</li>
+                    <li>Used PostgreSQL and MySQL to validate and manually test backend functionality, ensuring smooth integration across the system.</li>
+                    <li>Created clear, concise documentation to support onboarding for future team members.</li>
+                </ul>
+            </div>
+
+            <!-- Reflection Section -->
+            <div>
+                <h4>What I Learned</h4>
+                <p>
+                    Working closely with one other team member, I gained hands-on experience building an admin dashboard using C# and Blazor. I contributed to a project still taking shape and focused on creating a functional, user-friendly interface while collaborating effectively in a remote setting.
+                </p>
+                <p>
+                    This project also provided an excellent opportunity to work with multiple databases (PostgreSQL and MySQL), ensuring seamless integration and maintaining high standards of quality in both development and testing.
+                </p>
             </div>
         </div>
     </div>
