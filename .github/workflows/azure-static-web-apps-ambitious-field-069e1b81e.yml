@@ -22,38 +22,28 @@ jobs:
         with:
           submodules: true
           lfs: false
-      - name: Install OIDC Client from Core Package
-        run: npm install @actions/core@latest @actions/http-client@latest
-      - name: Get Id Token
-        uses: actions/github-script@v6.3.0
-        id: idtoken
+
+      # Setup .NET Core to ensure the correct version is installed
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
         with:
-            script: |
-                const coredemo = require('@actions/core')
-                return await coredemo.getIDToken()
-            result-encoding: string
+          dotnet-version: '7.0.x' # Specify the required .NET version
+
+      # Restore .NET dependencies
+      - name: Restore Dependencies
+        run: dotnet restore ./MyPortfolio/MyPortfolio.csproj
+
+      # Build the Blazor application
+      - name: Build Application
+        run: dotnet publish ./MyPortfolio/MyPortfolio.csproj -c Release -o ./MyPortfolio/wwwroot
+
+      # Deploy to Azure Static Web Apps
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AMBITIOUS_FIELD_069E1B81E }}
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "./MyPortfolio" # App source code path
           skip_api_build: true
-          # api_location: "" # Api source code path - optional
-          output_location: "wwwroot" # Built app content directory - optional
-          github_id_token: ${{ steps.idtoken.outputs.result }}
-          ###### End of Repository/Build Configurations ######
-
-  # close_pull_request_job:
-    # if: github.event_name == 'pull_request' && github.event.action == 'closed'
-  #   runs-on: ubuntu-latest
-  #   name: Close Pull Request Job
-  #   steps:
-  #     - name: Close Pull Request
-  #       id: closepullrequest
-  #       uses: Azure/static-web-apps-deploy@v1
-  #       with:
-  #         action: "close"
+          output_location: "wwwroot" # Built app content directory
