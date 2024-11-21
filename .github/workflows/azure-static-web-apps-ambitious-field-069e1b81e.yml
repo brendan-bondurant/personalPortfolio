@@ -47,3 +47,4 @@ jobs:
           app_location: "./MyPortfolio" # App source code path
           skip_api_build: true
           output_location: "wwwroot" # Built app content directory
+          github_id_token: ${{ steps.idtoken.outputs.result }}
