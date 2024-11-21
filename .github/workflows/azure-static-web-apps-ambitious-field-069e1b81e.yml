@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     permissions:
-        id-token: write
-        contents: read
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v3
         with:
@@ -47,4 +47,3 @@ jobs:
           app_location: "./MyPortfolio" # App source code path
           skip_api_build: true
           output_location: "wwwroot" # Built app content directory
-          github_id_token: ${{ steps.idtoken.outputs.result }}
