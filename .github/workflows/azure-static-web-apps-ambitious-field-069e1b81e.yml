@@ -27,7 +27,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x'  # Use the required .NET version
+          dotnet-version: '8.0.x'
 
       - name: Install dependencies
         run: dotnet restore ./MyPortfolio/MyPortfolio.csproj
@@ -42,3 +42,4 @@ jobs:
           app_location: "./MyPortfolio"
           output_location: "wwwroot"
           api_location: ""  # No backend API
+          action: "upload"  # Explicit deployment action
