@@ -32,10 +32,6 @@ jobs:
       - name: Install dependencies
         run: dotnet restore ./MyPortfolio/MyPortfolio.csproj
 
-      - name: Debug Build Output
-        run: ls -R ./MyPortfolio/wwwroot
-
-
       - name: Build application
         run: dotnet publish ./MyPortfolio/MyPortfolio.csproj -c Release -o ./MyPortfolio/wwwroot
 
@@ -47,3 +43,4 @@ jobs:
           output_location: "./"
           api_location: ""  # No backend API
           action: "upload"  # Explicit deployment action
+          github_id_token: ${{ steps.idtoken.outputs.result }}
