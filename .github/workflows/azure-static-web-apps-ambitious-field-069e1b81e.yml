@@ -32,11 +32,15 @@ jobs:
       - name: Install dependencies
         run: dotnet restore ./MyPortfolio/MyPortfolio.csproj
 
+      - name: Debug Build Output
+        run: ls -R ./MyPortfolio/wwwroot
+
+
       - name: Build application
         run: dotnet publish ./MyPortfolio/MyPortfolio.csproj -c Release -o ./MyPortfolio/wwwroot
 
       - name: Deploy to Azure Static Web Apps
-        uses: Azure/static-web-apps-deploy@v2
+        uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AMBITIOUS_FIELD_069E1B81E }}
           app_location: "./MyPortfolio"
