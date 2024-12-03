@@ -37,7 +37,7 @@
 /* /Shared/Greeting.razor.rz.scp.css */
 /* Background Styling for Greeting Section */
 .greeting-background[b-i8eezk1xqf] {
-  background-image: url('../images/icons/BackgroundGreeting.svg');
+  background-image: url('../images/svgFiles/BackgroundGreeting.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
