@@ -1,0 +1,378 @@
+@import '_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css';
+
+/* /Shared/About.razor.rz.scp.css */
+/* Styling for the profile image */
+.profile-image img[b-g9qijgo2pt] {
+  width: 80%;               /* Adjust size as needed */
+  max-width: 250px;         /* Set a max size to prevent it from getting too large */
+      /* Makes the image a circle */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for depth */
+  transition: transform 0.3s ease; /* Optional: smooth hover scaling */
+}
+
+/* Optional hover effect */
+.profile-image img:hover[b-g9qijgo2pt] {
+  transform: scale(1.05);  /* Slightly enlarge on hover */
+}
+/* /Shared/BlockFrame.razor.rz.scp.css */
+/* Styles for logos */
+.tech-logos img.tech-logo[b-0g4ldd971y] {
+    width: auto;
+    height: 50px;
+    margin: 0.5rem;
+}
+
+
+/* /Shared/BonsaiBid.razor.rz.scp.css */
+.tech-logo[b-iauyv1wko2] {
+  height: 50px;
+  width: auto;
+}
+
+
+.future-image[b-iauyv1wko2] {
+  width: 100px;
+  height: auto;
+}
+/* /Shared/Greeting.razor.rz.scp.css */
+/* Background Styling for Greeting Section */
+.greeting-background[b-i8eezk1xqf] {
+  background-image: url('../images/icons/BackgroundGreeting.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2rem;
+}
+
+
+/* Main Section Styling */
+.greeting-section[b-i8eezk1xqf] {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+/* Text Styling */
+.intro-text h1[b-i8eezk1xqf] {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.roles[b-i8eezk1xqf] {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.blinking-underscore[b-i8eezk1xqf] {
+  animation: blink-b-i8eezk1xqf 1s steps(2, start) infinite;
+}
+
+/* Image Styling */
+.profile-image img[b-i8eezk1xqf] {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .greeting-section[b-i8eezk1xqf] {
+    text-align: center;
+  }
+
+  .intro-text[b-i8eezk1xqf], .profile-image[b-i8eezk1xqf] {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-image img[b-i8eezk1xqf] {
+    width: 60%;
+  }
+}
+
+/* Blinking Underscore Animation */
+@keyframes blink-b-i8eezk1xqf {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+/* @import url('open-iconic/font/css/open-iconic-bootstrap.min.css'); */
+
+/* Global Styling */
+html[b-gh431we3d5], body[b-gh431we3d5] {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1:focus[b-gh431we3d5] {
+    outline: none;
+}
+
+:root[b-gh431we3d5] {
+    /* Light Mode Variables */
+    --background-color: #EAEAEA;
+    --text-color: #1e1e2d;
+    --link-color: #1e1e2d;
+    /* Dark Mode Variables */
+    --background-color-dark: #1e1e2d;
+    --text-color-dark: #EAEAEA;
+    --link-color-dark: #EAEAEA;
+}
+
+/* Default (Light Mode) */
+body[b-gh431we3d5] {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 70px;
+}
+
+a[b-gh431we3d5], .btn-link[b-gh431we3d5] {
+    color: var(--link-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode[b-gh431we3d5] {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+    body.dark-mode a[b-gh431we3d5],
+    body.dark-mode .btn-link[b-gh431we3d5],
+    body.dark-mode .navbar a[b-gh431we3d5],
+    body.dark-mode .navbar .nav-link[b-gh431we3d5] {
+        color: var(--link-color-dark);
+    }
+
+    body.dark-mode .navbar[b-gh431we3d5] {
+        background-color: var(--background-color-dark);
+    }
+
+/* Button Styling */
+.btn-primary[b-gh431we3d5] {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.btn:focus[b-gh431we3d5], .btn:active:focus[b-gh431we3d5], .btn-link.nav-link:focus[b-gh431we3d5], .form-control:focus[b-gh431we3d5], .form-check-input:focus[b-gh431we3d5] {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.content[b-gh431we3d5] {
+    padding-top: 1.1rem;
+}
+
+.container[b-gh431we3d5] {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-container[b-gh431we3d5] {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+/* Validation Styling */
+.valid.modified:not([type=checkbox])[b-gh431we3d5] {
+    outline: 1px solid #26b050;
+}
+
+.invalid[b-gh431we3d5] {
+    outline: 1px solid red;
+}
+
+.validation-message[b-gh431we3d5] {
+    color: red;
+}
+
+/* Blazor Error UI Styling */
+#blazor-error-ui[b-gh431we3d5] {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-gh431we3d5] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+.blazor-error-boundary[b-gh431we3d5] {
+    background: url(data:image/svg+xml;base64,...) no-repeat 1rem/1.8rem, #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: white;
+}
+
+/* Loading Progress Styling */
+.loading-progress[b-gh431we3d5] {
+    position: relative;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin: 20vh auto 1rem auto;
+}
+
+    .loading-progress circle[b-gh431we3d5] {
+        fill: none;
+        stroke: #e0e0e0;
+        stroke-width: 0.6rem;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+    }
+
+        .loading-progress circle:last-child[b-gh431we3d5] {
+            stroke: #1b6ec2;
+            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+            transition: stroke-dasharray 0.05s ease-in-out;
+        }
+
+.loading-progress-text[b-gh431we3d5] {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+.loading-progress-text[b-gh431we3d5]:after {
+    content: var(--blazor-load-percentage-text, "Loading");
+}
+
+.main-content[b-gh431we3d5] {
+    padding: 3rem 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+    
+/* Navbar Styling */
+/* Wrapper for the navbar */
+.navbar[b-gh431we3d5] {
+    display: flex;
+    justify-content: space-between; /* Adjust items inside the navbar */
+    align-items: center; /* Align items vertically */
+    padding: 1rem 0;
+    font-size: 1rem;
+}
+
+.navbar .navbar-brand[b-gh431we3d5] {
+  margin-right: auto; /* Moves brand to the left */
+}
+
+.navbar .navbar-nav[b-gh431we3d5] {
+  margin-left: auto; /* Moves nav links to the right */
+}
+
+.navbar-container[b-gh431we3d5] {
+    max-width: 1200px; /* Restrict maximum width */
+    margin: 0 auto; /* Center-align the navbar */
+    padding: 0 15px; /* Add padding for spacing */
+}
+
+/* Dark mode button styling if it applies */
+.icon-button[b-gh431we3d5] {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+
+.name[b-gh431we3d5] {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links a[b-gh431we3d5] {
+    margin-left: 2rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+    .nav-links a:hover[b-gh431we3d5] {
+        text-decoration: underline;
+    }
+
+/* Responsive Adjustments */
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-gh431we3d5] {
+        display: none;
+    }
+
+    .top-row.auth[b-gh431we3d5] {
+        justify-content: space-between;
+    }
+
+    .top-row a[b-gh431we3d5], .top-row .btn-link[b-gh431we3d5] {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-gh431we3d5] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-gh431we3d5] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-gh431we3d5] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+.section-container[b-gh431we3d5] {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* /Shared/NavBar.razor.rz.scp.css */
+
+/* /Shared/PhilosDBL.razor.rz.scp.css */
+.tech-logo[b-ovlwq5er3j] {
+  height: 50px;
+  width: auto;
+}
+/* /Shared/Portfolio.razor.rz.scp.css */
+.tech-logo[b-z3mfqamc8e] {
+  height: 50px;
+  width: auto;
+}
+/* /Shared/Writing.razor.rz.scp.css */
+.writing-section[b-qy5z03waa5] {
+  background-color: #f9f9f9;
+}
+
+.card[b-qy5z03waa5] {
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover[b-qy5z03waa5] {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title[b-qy5z03waa5] {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text[b-qy5z03waa5] {
+  font-size: 0.9rem;
+}
