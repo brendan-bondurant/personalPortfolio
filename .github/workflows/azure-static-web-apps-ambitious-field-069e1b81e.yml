@@ -62,6 +62,6 @@ jobs:
           action: "upload" # Explicit deployment action
           app_location: "./MyPortfolio/wwwroot" # App source code path
           api_location: "" # No backend API
+          skip_app_build: true
           output_location: "wwwroot" # Built app content directory
           github_id_token: ${{ steps.idtoken.outputs.result }}
-          skip_app_build: true
