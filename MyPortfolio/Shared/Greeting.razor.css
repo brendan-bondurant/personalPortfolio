@@ -1,6 +1,6 @@
 /* Background Styling for Greeting Section */
 .greeting-background {
-  background-image: url('../images/icons/BackgroundGreeting.svg');
+  background-image: url('../images/svgFiles/BackgroundGreeting.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
